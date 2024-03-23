@@ -28,7 +28,7 @@ class BasicAPI(BaseHTTPRequestHandler):
             post_data = self.rfile.read(content_length).decode('utf-8')
             post_params = parse_qs(post_data)
 
-            if self.path == '/create':
+            if self.path == '/calculate':
                 number = post_params.get('name', [''])
                 number_str = ''.join(number)
 
